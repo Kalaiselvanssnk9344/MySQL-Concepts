@@ -1,0 +1,39 @@
+
+CREATE DATABASE practiceOne;
+
+USE practiceOne;
+
+CREATE TABLE table1 (
+	dept_id INT PRIMARY KEY AUTO_INCREMENT,
+    dept_name VARCHAR(200),
+    salary DECIMAL(10, 2)
+);
+
+DROP TABLE table1;
+
+
+
+INSERT INTO table1 (dept_name, salary) VALUES
+('CSE', 1),
+('IT', 2),
+('AIDS', 5),
+('CSBS', 10),
+('CSE', 1),
+('IT', 2);
+
+
+SELECT * FROM table1
+WHERE salary > 1 AND salary <= 5;
+
+SELECT * FROM table1
+WHERE salary = 1 OR salary > 5;
+
+SELECT * FROM table1 
+WHERE NOT salary > 5;
+
+SELECT * FROM table1
+WHERE salary > 1 AND dept_name = 'AIDS' OR dept_name = 'CSBS';
+
+SELECT * FROM table1
+WHERE NOT dept_name = 'AIDS' AND NOT dept_name = 'CSBS';
+
