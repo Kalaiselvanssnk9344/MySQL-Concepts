@@ -1,0 +1,83 @@
+
+CREATE DATABASE practiceOne;
+
+USE practiceOne;
+
+CREATE TABLE table1 (
+	dept_id INT PRIMARY KEY AUTO_INCREMENT,
+    dept_name VARCHAR(200),
+    salary DECIMAL(10, 2)
+);
+
+DROP TABLE table1;
+
+
+
+INSERT INTO table1 (dept_name, salary) VALUES
+('CSE', 1),
+('IT', 2),
+('AIDS', 5),
+('CSBS', 10),
+('CSE', 1),
+('IT', 2);
+
+SELECT * FROM table1
+WHERE dept_name = 'IT';
+
+SELECT * FROM table1
+WHERE salary = 1;
+
+SELECT * FROM table1
+WHERE salary > 1;
+
+SELECT * FROM table1
+WHERE salary < 2;
+
+SELECT * FROM table1
+WHERE salary >= 1;
+
+SELECT * FROM table1
+WHERE salary <= 1;
+
+SELECT * FROM table1
+WHERE salary <> 1;
+
+SELECT * FROM table1
+WHERE salary BETWEEN 1 AND 5;
+
+SELECT * FROM table1
+WHERE dept_name LIKE '%t';
+
+SELECT * FROM table1
+WHERE dept_name NOT LIKE '%t';
+
+SELECT * FROM table1
+WHERE dept_name LIKE 'c%';
+
+SELECT * FROM table1
+WHERE dept_name LIKE 'i%t';
+
+SELECT * FROM table1
+WHERE dept_name LIKE '_t';
+
+SELECT * FROM table1
+WHERE dept_name LIKE 'i_';
+
+SELECT * FROM table1
+WHERE dept_name NOT LIKE 'i_';
+
+SELECT * FROM table1
+WHERE dept_name LIKE 'cs_%';
+
+SELECT * FROM table1
+WHERE dept_name IN ('CSBS', 'IT');
+
+SELECT * FROM table1  
+WHERE dept_nameNOT IN ('CSBS', 'IT');
+
+
+
+
+
+
+
