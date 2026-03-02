@@ -1,0 +1,48 @@
+
+CREATE DATABASE practiceOne;
+
+USE practiceOne;
+
+CREATE TABLE table1 (
+	dept_id INT PRIMARY KEY AUTO_INCREMENT,
+    dept_name VARCHAR(200),
+    salary DECIMAL(10, 2)
+);
+
+DROP TABLE table1;
+
+TRUNCATE TABLE table1;
+
+INSERT INTO table1 (dept_name, salary) VALUES
+('CSE', 1),
+('IT', 2),
+('AIDS', 5),
+('CSBS', 10),
+('CSE', NULL),
+('IT', 3);
+
+INSERT INTO table1 (dept_name, salary) VALUES
+('XX', 99);
+
+SELECT * FROM table1;
+
+
+SELECT dept_name FROM table1
+WHERE dept_name LIKE 'c%';
+
+SELECT dept_name FROM table1
+WHERE dept_name LIKE '%sb%';
+
+SELECT dept_name FROM table1
+WHERE dept_name LIKE '_s%';
+
+SELECT dept_name FROM table1
+WHERE dept_name LIKE 'c__%';
+
+SELECT dept_name FROM table1
+WHERE dept_name LIKE 'a%s';
+
+SELECT dept_name FROM table1
+WHERE dept_name NOT LIKE 'c%';
+
+
