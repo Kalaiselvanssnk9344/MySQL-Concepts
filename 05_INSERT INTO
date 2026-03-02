@@ -1,0 +1,31 @@
+
+CREATE DATABASE practiceOne;
+
+USE practiceOne;
+
+CREATE TABLE table1 (
+	dept_id INT PRIMARY KEY ,
+    dept_name VARCHAR(200),
+    salary DECIMAL(10, 2)
+);
+
+DROP TABLE table1;
+
+
+
+INSERT INTO table1 (dept_name, salary) VALUES
+('CSE', 1),
+('IT', 2),
+('AIDS', 5),
+('CSBS', 10),
+('CSE', 1),
+('IT', 3);
+
+
+INSERT INTO table1 (dept_name, salary) VALUES 
+('MECH', 15),
+('PSYCH', 20);
+
+INSERT INTO table1  VALUES 
+(1, 'MECH', 15),
+(2, 'PSYCH', 20);
