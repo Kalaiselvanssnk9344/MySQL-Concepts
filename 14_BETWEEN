@@ -1,0 +1,51 @@
+
+CREATE DATABASE practiceOne;
+
+USE practiceOne;
+
+CREATE TABLE table1 (
+	dept_id INT PRIMARY KEY AUTO_INCREMENT,
+    dept_name VARCHAR(200),
+    salary DECIMAL(10, 2),
+    date DATE
+);
+
+DROP TABLE table1;
+
+TRUNCATE TABLE table1;
+
+INSERT INTO table1 (dept_name, salary, date) VALUES
+('CSE', 1, '2026-01-11'),
+('IT', 2, '2026-02-12'),
+('AIDS', 5, '2026-03-13'),
+('CSBS', 10, '2026-04-14'),
+('CSE', NULL, '2026-05-15'),
+('IT', 3, '2026-06-16');
+
+INSERT INTO table1 (dept_name, salary) VALUES
+('XX', 99);
+
+SELECT * FROM table1;
+
+SELECT salary FROM table1
+WHERE salary BETWEEN 1 AND 5;
+
+SELECT salary FROM table1
+WHERE salary NOT BETWEEN 1 AND 5;
+
+SELECT salary FROM table1
+WHERE salary BETWEEN 1 AND 5 
+AND dept_name IN ('IT', 'CSBS');
+
+SELECT dept_name FROM table1
+WHERE dept_name BETWEEN 'CSE' AND 'IT';
+
+SELECT dept_name FROM table1
+WHERE dept_name NOT BETWEEN 'CSE' AND 'IT';
+
+SELECT dept_name FROM table1
+WHERE dept_name BETWEEN 'CSE' AND 'IT'
+ORDER BY dept_name DESC;
+
+SELECT date FROM table1
+WHERE date BETWEEN '2026-03-01' AND '2026-06-11';
